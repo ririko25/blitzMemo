@@ -11,24 +11,24 @@ const NewMemoPage: BlitzPage = () => {
 
   return (
     <div>
-      <h1>Create New Memo</h1>
+      <h1>Create New Memooon</h1>
 
       <MemoForm
         initialValues={{}}
         onSubmit={async (event) => {
-          if(currentUser){
-            try{
+          if (currentUser) {
+            try {
               const memo = await createMemoMutation({
-                data:{
+                data: {
                   title: event.target[0].value,
-                  body:event.target[1].value,
-                  user:{connect:{id:currentUser.id}},
+                  body: event.target[1].value,
+                  user: { connect: { id: currentUser.id } },
                 },
               })
               alert("Success!" + JSON.stringify(memo))
               router.push(`/memo/${memo.id}`)
-            }catch(error){
-              alert("Error creating メモ" + JSON.stringify(error,null,2))
+            } catch (error) {
+              alert("Error creating メモ" + JSON.stringify(error, null, 2))
             }
           }
         }}
