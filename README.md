@@ -1,5 +1,6 @@
 # 概要
-以下のサイトを参考にBlitzでmemoアプリを作成してみる
+
+以下のサイトを参考に Blitz で memo アプリを作成してみる
 
 参考サイト
 'https://bagelee.com/programming/blitz-js-tailwind/'
