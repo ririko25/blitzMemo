@@ -1,7 +1,7 @@
-import { Link, BlitzPage, useMutation } from "blitz"
-import Layout from "app/layouts/Layout"
 import logout from "app/auth/mutations/logout"
 import { useCurrentUser } from "app/hooks/useCurrentUser"
+import Layout from "app/layouts/Layout"
+import { BlitzPage, Link, useMutation } from "blitz"
 import { Suspense } from "react"
 
 /*
@@ -54,70 +54,21 @@ const Home: BlitzPage = () => {
     <div className="container">
       <main>
         <div className="logo">
-          <img src="/logo.png" alt="blitz.js" />
+          <img src="/ririko.jpg" alt="blitz.js" />
         </div>
-        <p>
-          <strong>Congrats!</strong> Your app is ready, including user sign-up and log-in.
-        </p>
+        <p>memento mori</p>
         <div className="buttons" style={{ marginTop: "1rem", marginBottom: "1rem" }}>
           <Suspense fallback="Loading...">
             <UserInfo />
           </Suspense>
         </div>
-        <p>
-          <strong>
-            To add a new model to your app, <br />
-            run the following in your terminal:
-          </strong>
-        </p>
-        <pre>
-          <code>blitz generate all project name:string</code>
-        </pre>
-        <pre>
-          <code>blitz db migrate</code>
-        </pre>
         <div>
           <p>
-            Then <strong>restart the server</strong>
-          </p>
-          <pre>
-            <code>Ctrl + c</code>
-          </pre>
-          <pre>
-            <code>blitz start</code>
-          </pre>
-          <p>
-            and go to{" "}
-            <Link href="/projects">
-              <a>/projects</a>
+            {/* and go to{" "} */}
+            <Link href="/memos">
+              <a>memos</a>
             </Link>
           </p>
-        </div>
-        <div className="buttons" style={{ marginTop: "5rem" }}>
-          <a
-            className="button"
-            href="https://blitzjs.com/docs/getting-started?utm_source=blitz-new&utm_medium=app-template&utm_campaign=blitz-new"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-          <a
-            className="button-outline"
-            href="https://github.com/blitz-js/blitz"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Github Repo
-          </a>
-          <a
-            className="button-outline"
-            href="https://slack.blitzjs.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Slack Community
-          </a>
         </div>
       </main>
 
@@ -127,7 +78,7 @@ const Home: BlitzPage = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Powered by Blitz.js
+          <b>Powered by Blitz.js</b>
         </a>
       </footer>
 
@@ -179,7 +130,7 @@ const Home: BlitzPage = () => {
           display: flex;
           justify-content: center;
           align-items: center;
-          background-color: #45009d;
+          background-color: #f8c631;
         }
 
         footer a {
@@ -189,7 +140,7 @@ const Home: BlitzPage = () => {
         }
 
         footer a {
-          color: #f4f4f4;
+          color: #fff;
           text-decoration: none;
         }
 
@@ -208,10 +159,12 @@ const Home: BlitzPage = () => {
         }
         .button {
           font-size: 1rem;
-          background-color: #6700eb;
+          background-color: #f8c631;
           padding: 1rem 2rem;
-          color: #f4f4f4;
+          color: #fff;
           text-align: center;
+          border: 1px solid #f8c631;
+          border-radius: 4px;
         }
 
         .button.small {
@@ -219,19 +172,19 @@ const Home: BlitzPage = () => {
         }
 
         .button:hover {
-          background-color: #45009d;
+          background-color: #f8c631;
         }
 
         .button-outline {
-          border: 2px solid #6700eb;
+          border: 2px solid #f8c631;
           padding: 1rem 2rem;
-          color: #6700eb;
+          color: #f8c631;
           text-align: center;
         }
 
         .button-outline:hover {
-          border-color: #45009d;
-          color: #45009d;
+          border-color: #f8c631;
+          color: #f8c631;
         }
 
         pre {
